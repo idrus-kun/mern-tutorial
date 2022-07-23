@@ -9,5 +9,5 @@ const {
 } = require('../controllers/goalController')
 
 router.route('/').get(getGoals).post(setGoal)
-router.route('/').put(updateGoal).delete(deleteGoal)
+router.route('/:id').put(updateGoal).delete(deleteGoal)
 
