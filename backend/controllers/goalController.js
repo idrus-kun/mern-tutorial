@@ -10,7 +10,11 @@
 // @acccess Private
 
 const setGoals = (req,res) => {
-    console.log(req.body)
+    if(!req.body.text) {
+        res.status(400)
+        throw new Error('Please add a text field')
+    }
+
     res.status(200).json({message: 'Set Goals'})
 }
 
@@ -32,7 +36,7 @@ const deleteGoals = (req,res) => {
 
 module.exports = {
     getGoals,
-    setGoal,
-    updateGoal,
-    deleteGoal
+    setGoals,
+    updateGoals,
+    deleteGoals
 }
