@@ -3,7 +3,7 @@
 // @acccess Private
 
     res.status(200).json({message: "Get Goals"})
-}
+
 
 // @desc    Set goals
 // @route   POST /api/goals
